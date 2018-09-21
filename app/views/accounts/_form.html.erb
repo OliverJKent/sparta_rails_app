@@ -12,19 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :account_num %>
+    <%= form.label 'Account Balance (£)' %>
     <%= form.number_field :account_num %>
   </div>
 
   <div>
     <%= form.label :account_sort %>
-  <%= collection_select(:accounts, :account_sort, AccountSort.all, :id, :sort, {:prompt => false}) %>
+  <%= collection_select(:account, :account_sort_id, AccountSort.all, :id, :sort) %>
 </div>
 
-  <!-- <div class="field">
-    <%= form.label :balance %>
-    <%= form.number_field :balance %>
-  </div> -->
 
   <div class="actions">
     <%= form.submit %>
