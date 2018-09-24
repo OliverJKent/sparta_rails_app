@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account Balance:</strong>
+  £<%= @account.account_num %>
+</p>
+
+<p>
+  <strong>Account Type:</strong>
+  <%= @account.account_sort.sort %>
+</p>
+
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>
